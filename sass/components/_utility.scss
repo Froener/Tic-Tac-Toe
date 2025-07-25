@@ -1,0 +1,19 @@
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.playAgain {
+  @include flexCenter;
+  min-width: 4rem;
+  padding: 0.25rem;
+  border-radius: 17.5%;
+  font-weight: 600;
+  color: $bgcolor;
+  @include mq(800px) {
+    margin-top: 2rem;
+  }
+}

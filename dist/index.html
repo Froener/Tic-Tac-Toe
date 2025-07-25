@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script type="module" src="js/main.js" defer></script>
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <main>
+        <section id="scoreboard" class="scoreboard">
+            <div class="scoreboard__header">
+                <p>
+                    <abbr title="Player X">X</abbr>
+                </p>
+                <p>Score</p>
+                <p>
+                    <abbr title="Player O">O</abbr>
+                </p>
+            </div>
+            <div class="scoreboard__row" role="row">
+                <div id="px_session_score" class="scoreboard__score center" role="cell">
+                    0
+                </div>
+                <div id="po_session_score" class="scoreboard__score center" role="cell">
+                    0
+                </div>
+            </div>
+        </section>
+        <section class="board">
+            <h2 id="nextmsg" class="h2__center">X turn</h2>
+            <div id="board__top" class="board__field center">
+                <div class="top">
+                    <div id="top__left" class="board__cell top__left cell" cellIndex="0"></div>
+                    <div id="top__mid" class="board__cell top__mid cell" cellIndex="1"></div>
+                    <div id="top__right" class="board__cell top__right cell" cellIndex="2"></div>
+                </div>
+                <div id="board__mid" class="board__mid">
+                    <div class="mid">
+                        <div id="mid__left" class="board__cell mid__left cell" cellIndex="3"></div>
+                        <div id="mid__mid" class="board__cell mid__mid cell" cellIndex="4"></div>
+                        <div id="mid__right" class="board__cell mid__right cell" cellIndex="5"></div>
+                    </div>
+                </div>
+                <div id="board__bot">
+                    <div class="bot">
+                        <div id="bot__left" class="board__cell bot__left cell" cellIndex="6"></div>
+                        <div id="bot__mid" class="board__cell bot__mid cell" cellIndex="7"></div>
+                        <div id="bot__right" class="board__cell bot__right cell" cellIndex="8"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form>
+            <button id="restartBtn" class="playAgain" type="button">Reset Board</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

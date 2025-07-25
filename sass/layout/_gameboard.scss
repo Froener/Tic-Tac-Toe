@@ -1,0 +1,74 @@
+.h2__center {
+  @include flexCenter;
+  margin-bottom: 1rem;
+}
+.board__field {
+  width: calc(100% - 10px);
+  @include flexCenter;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  @include mq(375px) {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .top {
+    @include flexCenter;
+  }
+  .mid {
+    @include flexCenter;
+  }
+  .bot {
+    @include flexCenter;
+  }
+  .board__mid {
+    border-top: 1px solid $field;
+    border-bottom: 1px solid $field;
+  }
+  .board__cell {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 2.5rem;
+    @include mq(768px) {
+      font-size: 4rem;
+    }
+    @include flexCenter;
+
+    padding: 1.5rem;
+
+    @include mq(768px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .fadeOut {
+      opacity: 0;
+      animation: fadeOut 1s ease-in-out;
+    }
+  }
+  .selected {
+    margin: 0 auto;
+    transition: margin 0.5s linear;
+  }
+
+  .not-selected {
+    visibility: hidden;
+    width: 0;
+    transition: width 0.5s linear, visibility 0.5s linear;
+  }
+}
+.top__mid {
+  border-right: 1px solid $field;
+  border-left: 1px solid $field;
+}
+.mid__mid {
+  border-right: 1px solid $field;
+  border-left: 1px solid $field;
+}
+.bot__mid {
+  border-right: 1px solid $field;
+  border-left: 1px solid $field;
+}
